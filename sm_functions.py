@@ -1,7 +1,10 @@
      #################################
     ###  DATA COLLECTION FUNCTIONS  ###
      #################################
-    
+import numpy as np
+import pandas as pd
+import itertools
+        
 def get_move_list(move_string): #### input is a string 
     '''
     Takes a move string that was striped from a PGN format, and removes unwanted characters and conserves SAN format.
@@ -79,7 +82,7 @@ def get_bitwise(board_state):
     Takes a 64 length list and decomposes it into 6 - 64 length arrays with bitwise encoding, -1,0,1
 
     Input: 64 length list of board states with piece encoding (r,n,b,q,k,p,R,N,B,Q,K,P,1)
-    Outpit: 6 
+    Output: 6 - 64 length arrays depicting board states with values -1,0,1
     '''
     
     bs = board_state 
