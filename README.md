@@ -26,4 +26,4 @@ In its escense I am creating a position evaluator, that when passed a chess boar
     - Convert (1,64) array into 6- (1,64) bitwise arrays with each board pretaining to a chess piece (pawn, rook, night, bishop, queen, king)
     - Integrate Stockfish with Python for position evaluation. This will return a float that corresponds with how good or bad the current board state is given where pieces are located.
         - Big limitation of Stockfish is the computation time required to compute alpha-beta tree searches.
-    - **NOTE: At this point, the data consists of a 6 arrays, and a Stockfish evaluated position score
+    - **NOTE: At this point, the data consists of a 6 arrays, and a Stockfish evaluated position score**
