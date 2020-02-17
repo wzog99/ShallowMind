@@ -14,9 +14,9 @@ In its escense I am creating a position evaluator, that when passed a chess boar
 - ML Models as an alternative
 - Neural Network structure
 - NN overfitting / underfitting
-
-### Process
-- Data processing and preparation
+    - Significant kurtosis of the target variable, positional score 
+### Data
+- **Data processing and preparation**
     - Over 250 Million games avalible
         - Chose a subset ~ 3M grandmaster games
     - Games are played in Standard algebraic notation (SAN) i.e. ( 1. d4 e6 2. c4 d5 3. Nf3 Nf6...)
@@ -27,3 +27,13 @@ In its escense I am creating a position evaluator, that when passed a chess boar
     - Integrate Stockfish with Python for position evaluation. This will return a float that corresponds with how good or bad the current board state is given where pieces are located.
         - Big limitation of Stockfish is the computation time required to compute alpha-beta tree searches.
     - **NOTE: At this point, the data consists of a 6 arrays, and a Stockfish evaluated position score**
+    
+### Modeling
+    - Attempt to use XGBoost regressor for quicker approximation of positional scores
+        - Prediction error RSME: ~2.4 Pawns
+    - Construct artificial neural network
+        - Prediction error RSME: ~1.7 Pawns
+    - Construct ANN 2 
+        - Prediction error RSME ~1.4 Pawns
+   
+        
