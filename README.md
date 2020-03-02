@@ -1,5 +1,9 @@
 # ShallowMind
-An endeavor into chess AI 
+An endeavor into chess AI
+
+
+### Foreword
+I conducted the bulk of my computations, both data aquisition and modeling, on a Google cloud virtual machine. If you are trying to reproduce my results, I would recommend taking a similar approach.
 
 ### Overview
 In its escense I am creating a position evaluator, that when passed a chess board with the location of all the pieces, it will compute a positional value. When deciding whether or not to make a move, it will parse through the board states, restrained by the legal moves it can make, and then decide which move to make based on which has the highest positional advantage.
@@ -15,6 +19,7 @@ In its escense I am creating a position evaluator, that when passed a chess boar
 - Neural Network structure
 - NN overfitting / underfitting
     - Significant kurtosis of the target variable, positional score 
+    
 ### Data
 - **Data processing and preparation**
     - Over 250 Million games avalible
@@ -35,5 +40,9 @@ In its escense I am creating a position evaluator, that when passed a chess boar
         - Prediction error RSME: ~1.7 Pawns
     - Construct ANN 2 
         - Prediction error RSME ~1.4 Pawns
+
+### Next Steps
+    - Collect more data that falls on the tails i.e. good and bad positions
+    - Apply Pyspark to drastically increase the speed of data processing
    
         
