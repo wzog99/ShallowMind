@@ -9,8 +9,10 @@
     # get_bitwise
     # get_white_win_bs
     # get_white_lose_bs
+    # get_board_state_string
+    # get_board_state_array
     # get_draw_bs
-    
+    # get_fen_from_bitwise
     
 #####################################################################################    
 
@@ -174,6 +176,22 @@ def get_white_win_bs(game): ### i from white_win
             break
     return(white_wins)
 
+
+#####################################################################################
+
+
+def get_board_state_string(move_list): 
+    game = move_list
+    board = chess.Board()
+
+    board_states = []
+    for move in game:
+        try:
+            board_states.append(board.board_fen())
+            board.push_san(move)
+        except:
+            continue
+    return(board_states)
 
 #####################################################################################
 
